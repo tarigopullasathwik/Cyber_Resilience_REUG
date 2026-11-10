@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+vendor/
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Local runtime state for the EDGEGUARD AI platform
+data/edgeguard/
+data/showcase/
+.smoke/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Generated experiment artifacts (regenerate with: python -m src.experiment_runner)
+# results/
+# figures/
+
+# Local environment and scratch/logs
+.env
+.env.local
+*.log

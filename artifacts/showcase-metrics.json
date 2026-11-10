@@ -1,0 +1,1014 @@
+{
+  "experiment": {
+    "id": "exp_5cf59f7673d8456c81",
+    "name": "Random Forest \u00b7 SYNTHETIC_DEMO_NOT_RESEARCH_DATA v1 \u00b7 46aa90",
+    "kind": "supervised",
+    "dataset_id": "ds_16ad58ebe8f542fa83",
+    "preprocess_id": "pp_0ddd984ee99846aa90",
+    "model_name": "random_forest",
+    "params": {
+      "n_estimators": 120,
+      "min_samples_leaf": 1
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "tn": 125,
+      "fp": 0,
+      "fn": 0,
+      "tp": 90,
+      "n_test": 215,
+      "predicted_positive": 90,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "model": "random_forest",
+      "model_label": "Random Forest",
+      "model_family": "supervised",
+      "threshold": 0.5,
+      "score_kind": "probability",
+      "training_seconds": 0.173,
+      "training_cpu_seconds": 0.172,
+      "host_cpu_percent_during_training": 99.25309694541376,
+      "host_memory_rss_mb": 210.8,
+      "model_size_bytes": 119109,
+      "model_size_mb": 0.1136,
+      "inference_latency_ms_mean": 21.732,
+      "inference_latency_ms_p95": 30.7782,
+      "throughput_records_per_sec": 4416.33,
+      "latency_samples": 120,
+      "n_features": 9,
+      "n_train": 516,
+      "n_val": 129,
+      "val_predicted_positive": 54,
+      "dataset_id": "ds_16ad58ebe8f542fa83",
+      "preprocess_id": "pp_0ddd984ee99846aa90",
+      "feature_names": [
+        "num__pkt_rate",
+        "num__bytes_rate",
+        "num__conn_count",
+        "num__failed_auth",
+        "num__cpu_usage",
+        "num__mem_usage",
+        "cat__protocol_mqtt",
+        "cat__protocol_tcp",
+        "cat__protocol_udp"
+      ]
+    },
+    "confusion": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "tn": 125,
+      "fp": 0,
+      "fn": 0,
+      "tp": 90,
+      "n_test": 215,
+      "predicted_positive": 90,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "model": "random_forest",
+      "model_label": "Random Forest",
+      "model_family": "supervised",
+      "threshold": 0.5,
+      "score_kind": "probability",
+      "training_seconds": 0.173,
+      "training_cpu_seconds": 0.172,
+      "host_cpu_percent_during_training": 99.25309694541376,
+      "host_memory_rss_mb": 210.8,
+      "model_size_bytes": 119109,
+      "model_size_mb": 0.1136,
+      "inference_latency_ms_mean": 21.732,
+      "inference_latency_ms_p95": 30.7782,
+      "throughput_records_per_sec": 4416.33,
+      "latency_samples": 120,
+      "n_features": 9,
+      "n_train": 516,
+      "n_val": 129,
+      "val_predicted_positive": 54,
+      "dataset_id": "ds_16ad58ebe8f542fa83",
+      "preprocess_id": "pp_0ddd984ee99846aa90",
+      "feature_names": [
+        "num__pkt_rate",
+        "num__bytes_rate",
+        "num__conn_count",
+        "num__failed_auth",
+        "num__cpu_usage",
+        "num__mem_usage",
+        "cat__protocol_mqtt",
+        "cat__protocol_tcp",
+        "cat__protocol_udp"
+      ]
+    },
+    "per_class": [
+      {
+        "class": "benign",
+        "support": 125,
+        "predicted_positive": 0,
+        "recall": 0.0,
+        "mean_score": 0.0023333333333333335
+      },
+      {
+        "class": "malicious",
+        "support": 90,
+        "predicted_positive": 90,
+        "recall": 1.0,
+        "mean_score": 0.9913888888888889
+      }
+    ],
+    "per_family": [
+      {
+        "family": "exfiltration",
+        "support": 31,
+        "detected": 31,
+        "recall": 1.0,
+        "mean_score": 0.9771505376344086
+      },
+      {
+        "family": "flood",
+        "support": 28,
+        "detected": 28,
+        "recall": 1.0,
+        "mean_score": 1.0
+      },
+      {
+        "family": "port_scan",
+        "support": 31,
+        "detected": 31,
+        "recall": 1.0,
+        "mean_score": 0.9978494623655914
+      }
+    ],
+    "feature_importance": [
+      {
+        "feature": "num__cpu_usage",
+        "importance": 0.357958815561137
+      },
+      {
+        "feature": "num__pkt_rate",
+        "importance": 0.30358800869867336
+      },
+      {
+        "feature": "num__mem_usage",
+        "importance": 0.15068372096805416
+      },
+      {
+        "feature": "num__conn_count",
+        "importance": 0.12076613999421512
+      },
+      {
+        "feature": "num__bytes_rate",
+        "importance": 0.04876124067062864
+      },
+      {
+        "feature": "num__failed_auth",
+        "importance": 0.018077140232093537
+      },
+      {
+        "feature": "cat__protocol_udp",
+        "importance": 6.064797155830144e-05
+      },
+      {
+        "feature": "cat__protocol_tcp",
+        "importance": 5.364806866989451e-05
+      },
+      {
+        "feature": "cat__protocol_mqtt",
+        "importance": 5.063783497003402e-05
+      }
+    ],
+    "status": "completed",
+    "progress": 1.0,
+    "message": "Training and evaluation complete",
+    "config": {
+      "threshold": "0.5"
+    },
+    "created_at": "2026-11-10T09:09:38+00:00",
+    "completed_at": "2026-11-10T09:09:41+00:00",
+    "artifact_saved": true,
+    "predictions_available": true,
+    "curves": {
+      "roc": [
+        {
+          "fpr": 0.0,
+          "tpr": 0.0
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.9111111111111111
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.9555555555555556
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 0.9777777777777777
+        },
+        {
+          "fpr": 0.0,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.016,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.032,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 0.088,
+          "tpr": 1.0
+        },
+        {
+          "fpr": 1.0,
+          "tpr": 1.0
+        }
+      ],
+      "pr": [
+        {
+          "recall": 1.0,
+          "precision": 0.4186046511627907
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.8910891089108911
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.9574468085106383
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.967741935483871
+        },
+        {
+          "recall": 1.0,
+          "precision": 0.9782608695652174
+        },
+        {
+          "recall": 1.0,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9888888888888889,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9777777777777777,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9555555555555556,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9444444444444444,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9333333333333333,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9222222222222223,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.9111111111111111,
+          "precision": 1.0
+        },
+        {
+          "recall": 0.0,
+          "precision": 1.0
+        }
+      ],
+      "score_distribution": {
+        "benign": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.075,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.06666666666666667,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.016666666666666666,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.075,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.008333333333333333
+        ],
+        "malicious": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.8833333333333333,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9166666666666666,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.975,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9416666666666667,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9333333333333333,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9083333333333333,
+          1.0,
+          1.0,
+          0.7583333333333333,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.9083333333333333
+        ]
+      }
+    }
+  },
+  "dataset": {
+    "id": "ds_16ad58ebe8f542fa83",
+    "name": "SYNTHETIC_DEMO_NOT_RESEARCH_DATA",
+    "version": 1,
+    "parent_id": null,
+    "origin": "upload",
+    "filename": "SYNTHETIC_DEMO_NOT_RESEARCH_DATA.csv",
+    "format": "csv",
+    "size_bytes": 126717,
+    "rows": 866,
+    "cols": 11,
+    "target_column": "Label",
+    "columns": [
+      "flow_id",
+      "src_ip",
+      "dst_ip",
+      "pkt_rate",
+      "bytes_rate",
+      "conn_count",
+      "failed_auth",
+      "cpu_usage",
+      "mem_usage",
+      "protocol",
+      "Label"
+    ],
+    "dtypes": {
+      "flow_id": "str",
+      "src_ip": "str",
+      "dst_ip": "str",
+      "pkt_rate": "float64",
+      "bytes_rate": "float64",
+      "conn_count": "float64",
+      "failed_auth": "float64",
+      "cpu_usage": "float64",
+      "mem_usage": "float64",
+      "protocol": "str",
+      "Label": "str"
+    },
+    "missing": {
+      "flow_id": 0,
+      "src_ip": 0,
+      "dst_ip": 0,
+      "pkt_rate": 0,
+      "bytes_rate": 0,
+      "conn_count": 0,
+      "failed_auth": 0,
+      "cpu_usage": 0,
+      "mem_usage": 0,
+      "protocol": 0,
+      "Label": 0
+    },
+    "duplicates": 6,
+    "class_distribution": {
+      "Normal": 505,
+      "flood": 121,
+      "port_scan": 120,
+      "exfiltration": 120
+    },
+    "target_candidates": [
+      {
+        "column": "Label",
+        "dtype": "str",
+        "unique": 4,
+        "hinted": true,
+        "top_values": [
+          {
+            "value": "Normal",
+            "count": 505
+          },
+          {
+            "value": "flood",
+            "count": 121
+          },
+          {
+            "value": "port_scan",
+            "count": 120
+          },
+          {
+            "value": "exfiltration",
+            "count": 120
+          }
+        ]
+      }
+    ],
+    "status": "ready",
+    "notes": null,
+    "created_at": "2026-11-10T09:09:37+00:00"
+  },
+  "preprocessing": {
+    "id": "pp_0ddd984ee99846aa90",
+    "dataset_id": "ds_16ad58ebe8f542fa83",
+    "name": "SYNTHETIC_DEMO_NOT_RESEARCH_DATA v1 \u00b7 46aa90",
+    "target_column": "Label",
+    "feature_names": [
+      "num__pkt_rate",
+      "num__bytes_rate",
+      "num__conn_count",
+      "num__failed_auth",
+      "num__cpu_usage",
+      "num__mem_usage",
+      "cat__protocol_mqtt",
+      "cat__protocol_tcp",
+      "cat__protocol_udp"
+    ],
+    "families": [
+      "exfiltration",
+      "flood",
+      "port_scan"
+    ],
+    "train_rows": 516,
+    "val_rows": 129,
+    "test_rows": 215,
+    "created_at": "2026-11-10T09:09:37+00:00",
+    "stats": {
+      "dataset": {
+        "id": "ds_16ad58ebe8f542fa83",
+        "name": "SYNTHETIC_DEMO_NOT_RESEARCH_DATA",
+        "version": 1
+      },
+      "target_column": "Label",
+      "benign_labels": [
+        "Normal"
+      ],
+      "attack_families": [
+        "exfiltration",
+        "flood",
+        "port_scan"
+      ],
+      "before": {
+        "rows": 866,
+        "columns": 11,
+        "missing_cells": 0,
+        "target_distribution": {
+          "Normal": 505,
+          "flood": 121,
+          "port_scan": 120,
+          "exfiltration": 120
+        }
+      },
+      "after": {
+        "rows": 860,
+        "features": 9,
+        "missing_cells": 0,
+        "target_distribution": {
+          "0": 500,
+          "1": 360
+        }
+      },
+      "removed": {
+        "duplicates": 6,
+        "incomplete_rows": 0,
+        "identifier_columns": [
+          "flow_id",
+          "src_ip",
+          "dst_ip"
+        ],
+        "dropped_columns": [
+          "flow_id",
+          "src_ip",
+          "dst_ip"
+        ],
+        "high_missing_columns": [],
+        "constant_columns": []
+      },
+      "split": {
+        "train_rows": 516,
+        "val_rows": 129,
+        "test_rows": 215,
+        "train_distribution": {
+          "0": 300,
+          "1": 216
+        },
+        "val_distribution": {
+          "0": 75,
+          "1": 54
+        },
+        "test_distribution": {
+          "0": 125,
+          "1": 90
+        }
+      },
+      "config": {
+        "missing_strategy": "median",
+        "scaling": "standard",
+        "imbalance": "class_weight",
+        "oversampled_train_only": false,
+        "test_size": 0.25,
+        "val_size": 0.15,
+        "random_state": 7,
+        "top_k": 0,
+        "drop_identifiers": true,
+        "remove_duplicates": true,
+        "handle_infinite": true,
+        "max_rows": 5000
+      },
+      "leakage_controls": [
+        "Duplicates were removed before the split.",
+        "Imputers, encoders, scaling and feature selection were fitted on the training split only.",
+        "Validation and test rows were transformed with the fitted training pipeline.",
+        "Oversampling, when enabled, was applied after the split and only to the training split.",
+        "Identifier-like columns were excluded from the feature matrix."
+      ],
+      "sampled": false,
+      "row_cap_applied": null,
+      "feature_names": [
+        "num__pkt_rate",
+        "num__bytes_rate",
+        "num__conn_count",
+        "num__failed_auth",
+        "num__cpu_usage",
+        "num__mem_usage",
+        "cat__protocol_mqtt",
+        "cat__protocol_tcp",
+        "cat__protocol_udp"
+      ]
+    },
+    "config": {
+      "target_column": "Label",
+      "drop_columns": [],
+      "benign_labels": null,
+      "remove_duplicates": true,
+      "handle_infinite": true,
+      "drop_identifiers": true,
+      "missing_strategy": "median",
+      "scaling": "standard",
+      "imbalance": "class_weight",
+      "max_missing_fraction": 0.6,
+      "max_onehot_categories": 24,
+      "top_k": 0,
+      "test_size": 0.25,
+      "val_size": 0.15,
+      "random_state": 7,
+      "max_rows": 5000
+    }
+  },
+  "containment_events": [
+    {
+      "id": "ce_f1793cf31a26429781",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-01",
+      "device_name": "Perimeter Camera",
+      "action": "REAUTHENTICATE",
+      "severity": 83.37,
+      "risk": 83.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "graduated-response guard: a lighter action must fail first",
+      "before_score": 1.0,
+      "after_score": 0.026667,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated reauthenticate (allowance 0.10) applied to 5 held-out records of D-01: mean anomaly score 0.978 -> 0.027 (+97.3%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:42+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 0, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"REAUTHENTICATE\", \"allowance\": 0.1, \"guard\": \"graduated-response guard: a lighter action must fail first\", \"family\": \"flood\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 0,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "REAUTHENTICATE",
+        "allowance": 0.1,
+        "guard": "graduated-response guard: a lighter action must fail first",
+        "family": "flood",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_b5bab23fc6914371a4",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-03",
+      "device_name": "Cold Storage Plug",
+      "action": "REAUTHENTICATE",
+      "severity": 73.37,
+      "risk": 73.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.025,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated reauthenticate (allowance 0.10) applied to 5 held-out records of D-03: mean anomaly score 1.000 -> 0.025 (+97.5%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 2, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"REAUTHENTICATE\", \"allowance\": 0.1, \"guard\": null, \"family\": \"exfiltration\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 2,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "REAUTHENTICATE",
+        "allowance": 0.1,
+        "guard": null,
+        "family": "exfiltration",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_aa7f85f804d84a38af",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-05",
+      "device_name": "Energy Meter A",
+      "action": "QUARANTINE",
+      "severity": 83.37,
+      "risk": 83.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.0,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated quarantine (allowance 0.00) applied to 5 held-out records of D-05: mean anomaly score 0.988 -> 0.000 (+100.0%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 4, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"QUARANTINE\", \"allowance\": 0.0, \"guard\": null, \"family\": \"exfiltration\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 4,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "QUARANTINE",
+        "allowance": 0.0,
+        "guard": null,
+        "family": "exfiltration",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_782f56c1d8ef45f79d",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-06",
+      "device_name": "Wearable Gateway",
+      "action": "QUARANTINE",
+      "severity": 83.37,
+      "risk": 83.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.013333,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated quarantine (allowance 0.00) applied to 5 held-out records of D-06: mean anomaly score 1.000 -> 0.013 (+98.7%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 5, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"QUARANTINE\", \"allowance\": 0.0, \"guard\": null, \"family\": \"flood\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 5,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "QUARANTINE",
+        "allowance": 0.0,
+        "guard": null,
+        "family": "flood",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_e951b54cbf7c499f8f",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-07",
+      "device_name": "Assembly PLC",
+      "action": "QUARANTINE",
+      "severity": 88.37,
+      "risk": 88.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.0,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated quarantine (allowance 0.00) applied to 5 held-out records of D-07: mean anomaly score 1.000 -> 0.000 (+100.0%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 6, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"QUARANTINE\", \"allowance\": 0.0, \"guard\": null, \"family\": \"port_scan\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 6,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "QUARANTINE",
+        "allowance": 0.0,
+        "guard": null,
+        "family": "port_scan",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_6009bbcca9954595b3",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-10",
+      "device_name": "Irrigation Node",
+      "action": "QUARANTINE",
+      "severity": 78.37,
+      "risk": 78.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.025,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated quarantine (allowance 0.00) applied to 5 held-out records of D-10: mean anomaly score 0.987 -> 0.025 (+97.5%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 9, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"QUARANTINE\", \"allowance\": 0.0, \"guard\": null, \"family\": \"exfiltration\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 9,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "QUARANTINE",
+        "allowance": 0.0,
+        "guard": null,
+        "family": "exfiltration",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    },
+    {
+      "id": "ce_43e7e4370d2240c6ad",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "device_id": "D-12",
+      "device_name": "Backup Gateway",
+      "action": "QUARANTINE",
+      "severity": 88.37,
+      "risk": 88.37,
+      "confidence": 1.0,
+      "status": "CONTAINED",
+      "reason": "Anomaly score 1.000 above threshold 0.500",
+      "before_score": 1.0,
+      "after_score": 0.038333,
+      "verification": "SUCCESS",
+      "verification_detail": "Simulated quarantine (allowance 0.00) applied to 5 held-out records of D-12: mean anomaly score 1.000 -> 0.038 (+96.2%).",
+      "created_at": "2026-11-10T09:09:41+00:00",
+      "verified_at": "2026-11-10T09:09:41+00:00",
+      "released_at": null,
+      "metadata_json": "{\"row_index\": 11, \"score\": 1.0, \"threshold\": 0.5, \"action\": \"QUARANTINE\", \"allowance\": 0.0, \"guard\": null, \"family\": \"flood\", \"withheld\": false, \"experiment_id\": \"exp_5cf59f7673d8456c81\", \"episode\": \"historical dataset replay (not live capture)\"}",
+      "metadata": {
+        "row_index": 11,
+        "score": 1.0,
+        "threshold": 0.5,
+        "action": "QUARANTINE",
+        "allowance": 0.0,
+        "guard": null,
+        "family": "flood",
+        "withheld": false,
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "episode": "historical dataset replay (not live capture)"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "rs_6c136514419d4ccf8d",
+      "experiment_id": "exp_5cf59f7673d8456c81",
+      "created_at": "2026-11-10T09:09:43+00:00",
+      "payload": {
+        "experiment_id": "exp_5cf59f7673d8456c81",
+        "measured": {
+          "source": "measured",
+          "latency_mean_ms": 21.602,
+          "latency_p95_ms": 35.616,
+          "latency_min_ms": 17.654,
+          "throughput_records_per_sec": 46.29,
+          "cpu_seconds": 1.7031,
+          "cpu_percent_backend": 98.55,
+          "rss_delta_mb": -0.051,
+          "rss_after_mb": 212.85,
+          "model_size_bytes": 119109,
+          "model_size_mb": 0.1136,
+          "records_scored": 80
+        },
+        "simulated_edge": {
+          "source": "simulated",
+          "cpu_capacity": 1.0,
+          "memory_capacity_mb": 256.0,
+          "bandwidth_capacity_kbps": 2048.0,
+          "detector_cpu_per_record": 0.006,
+          "memory_per_device_mb": 3.2,
+          "latency_budget_ms": 25.0,
+          "meets_latency_budget": false
+        },
+        "note": "Latency and memory are measured on this backend host. The edge budget is a simulation parameter and does not describe physical edge hardware."
+      }
+    }
+  ],
+  "exported_at": "2026-11-10T09:09:43+00:00",
+  "scope": "Research prototype. Network devices, containment actions and edge resource budgets are simulated. Host CPU, memory and latency figures are measured on this machine. No real network is scanned or blocked."
+}

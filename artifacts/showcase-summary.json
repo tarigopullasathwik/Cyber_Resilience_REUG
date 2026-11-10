@@ -1,0 +1,130 @@
+{
+  "scope": "synthetic demonstration only - not research data",
+  "dataset": {
+    "name": "SYNTHETIC_DEMO_NOT_RESEARCH_DATA",
+    "rows": 866,
+    "columns": 11,
+    "duplicates": 6,
+    "class_distribution": {
+      "Normal": 505,
+      "flood": 121,
+      "port_scan": 120,
+      "exfiltration": 120
+    }
+  },
+  "preprocessing": {
+    "id": "pp_0ddd984ee99846aa90",
+    "after_rows": 860,
+    "features": 9,
+    "split": {
+      "train_rows": 516,
+      "val_rows": 129,
+      "test_rows": 215,
+      "train_distribution": {
+        "0": 300,
+        "1": 216
+      },
+      "val_distribution": {
+        "0": 75,
+        "1": 54
+      },
+      "test_distribution": {
+        "0": 125,
+        "1": 90
+      }
+    },
+    "removed": {
+      "duplicates": 6,
+      "incomplete_rows": 0,
+      "identifier_columns": [
+        "flow_id",
+        "src_ip",
+        "dst_ip"
+      ],
+      "dropped_columns": [
+        "flow_id",
+        "src_ip",
+        "dst_ip"
+      ],
+      "high_missing_columns": [],
+      "constant_columns": []
+    }
+  },
+  "experiments": {
+    "unknown": {
+      "id": "exp_0a563b8403a84f26bb",
+      "known_attack_recall": 1.0,
+      "unknown_attack_recall": 1.0,
+      "benign_false_positive_rate": 0.008,
+      "heldout_families": [
+        "exfiltration"
+      ]
+    },
+    "random_forest": {
+      "id": "exp_5cf59f7673d8456c81",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "n_test": 215,
+      "inference_latency_ms_mean": 21.732,
+      "model_size_bytes": 119109
+    },
+    "all_ids": [
+      "exp_6d08f09bdebb47388a",
+      "exp_2b559e21a2c5478498",
+      "exp_5cf59f7673d8456c81"
+    ]
+  },
+  "containment": {
+    "events": 7,
+    "outcomes": {
+      "SUCCESS": 7
+    },
+    "actions": [
+      "QUARANTINE",
+      "REAUTHENTICATE"
+    ],
+    "pipeline": {
+      "MONITOR": 215,
+      "DETECT": 90,
+      "ASSESS": 7,
+      "CONTAIN": 7,
+      "VERIFY": 7,
+      "LEARN": 7
+    }
+  },
+  "resources": {
+    "host_cpu_percent": 0.0,
+    "host_memory_percent": 75.9,
+    "edge_budget": {
+      "cpu_capacity": 1.0,
+      "memory_capacity_mb": 256.0,
+      "bandwidth_capacity_kbps": 2048.0,
+      "detector_cpu_per_record": 0.006,
+      "memory_per_device_mb": 3.2,
+      "latency_budget_ms": 25.0
+    }
+  },
+  "command_center": {
+    "datasets": 1,
+    "experiments": 4,
+    "completed_experiments": 4,
+    "preprocess_runs": 1,
+    "reports": 1,
+    "containment_events": 7,
+    "contained_threats": 7,
+    "simulated_devices": 12,
+    "healthy_devices": 5
+  },
+  "report": {
+    "id": "rp_93bd205bf7a54e81a8",
+    "bytes": 7151
+  },
+  "exports": [
+    "artifacts/showcase-report.pdf",
+    "artifacts/showcase-metrics.csv",
+    "artifacts/showcase-metrics.json"
+  ]
+}
