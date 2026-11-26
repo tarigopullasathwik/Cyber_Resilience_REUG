@@ -331,7 +331,7 @@ class AnomalyDetector:
 
         Devices in ``device_ids`` are the only inputs; no labels are used.
         """
-        X = np.asarray(features, dtype=float)
+        X = np.ascontiguousarray(np.asarray(features, dtype=float))
         if X.ndim == 1:
             X = X.reshape(1, -1)
         stat_scores, contrib_matrix = self.stat.score_batch(X, device_ids)
@@ -417,8 +417,12 @@ class AnomalyDetector:
             missing = [c for c in FEATURE_NAMES if c not in features.columns]
             if missing:
                 raise ValueError(f"calibration frame is missing feature columns: {missing}")
-            return features[list(FEATURE_NAMES)].to_numpy(dtype=float)
-        return np.asarray(features, dtype=float)
+            # Force C order: selecting a column subset from a fragmented frame
+            # yields a Fortran-ordered view, and NumPy reduces along axis=1 in a
+            # different order for that layout, changing results in the last bit.
+            # Normalising the layout keeps calibration bitwise reproducible.
+            return np.ascontiguousarray(features[list(FEATURE_NAMES)].to_numpy(dtype=float))
+        return np.ascontiguousarray(np.asarray(features, dtype=float))
 
     def top_contributions(self, result: ScoreResult, k: int = 3) -> List[Tuple[str, float]]:
         items = sorted(result.contributions.items(), key=lambda kv: kv[1], reverse=True)
